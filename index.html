@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoRail SA - Solar Railway</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div id="startScreen" class="screen">
+
+        <h1>EcoDash SA</h1>
+
+        <h2>Solar Railway</h2>
+
+        <p>
+            Operating a solar powered train across a
+            South African inspired railway environment.
+        </p>
+
+        <p>
+            Manage your energy, reach warehouses,
+            transport food cargos and avoid railway obstruction.
+        </p>
+
+        <button id="startButton">
+            Start Journey
+        </button>
+
+        <p class="controls">
+            Controls: AD or Arrow Keys
+        </p>
+
+    </div>
+
+
+
+    <div id="gameScreen" class="hidden">
+
+
+        <div id="hud">
+
+            <div class="hud-item">
+                <span>Score:</span>
+                <span id="score">0</span>
+            </div>
+
+
+            <div class="hud-item">
+                <span>High Score:</span>
+                <span id="highScore">0</span>
+            </div>
+
+
+
+            <div class="hud-item">
+                <span>Battery:</span>
+                <span id="battery">100%</span>
+            </div>
+
+
+            <div class="hud-item">
+                <span>Distance:</span>
+                <span id="distance">0.0 km</span>
+            </div>
+
+
+            <div class="hud-item">
+                <span>Warehouse:</span>
+                <span id="warehouse">0</span>
+            </div>
+
+
+            <div class="hud-item">
+                <span>Food cargo:</span>
+                <span id="cargo">0</span>
+            </div>
+
+
+            <div class="hud-item">
+                <span>Efficiency:</span>
+                <span id="efficiency">0</span>
+            </div>
+
+
+        </div>
+
+
+
+        <canvas
+            id="gameCanvas"
+            width="900"
+            height="600">
+        </canvas>
+
+
+
+        <div id="controls">
+
+            <span>
+                AD / Arrow Keys: Move
+            </span>
+
+
+            <button id="pauseButton">
+                Pause
+            </button>
+
+
+            <button id="restartButton">
+                Restart
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="pauseScreen" class="screen hidden">
+
+        <h1>Journey Paused</h1>
+
+        <p>
+            Your train journey is currently paused.
+        </p>
+
+
+        <button id="resumeButton">
+            Resume
+        </button>
+
+
+        <button id="pauseRestartButton">
+            Restart
+        </button>
+
+    </div>
+
+
+    <div id="gameOverScreen" class="screen hidden">
+
+        <h1>Journey Complete</h1>
+
+        <p>
+            Your railway journey has ended.
+        </p>
+
+
+        <div class="results">
+
+            <p>
+                Final Score:
+                <strong id="finalScore">0</strong>
+            </p>
+
+
+            <p>
+                Distance:
+                <strong id="finalDistance">0 km</strong>
+            </p>
+
+
+            <p>
+                Wharehouse:
+                <strong id="finalWarehouse">0</strong>
+            </p>
+
+
+        </div>
+
+
+        <button id="gameOverRestartButton">
+            Play Again
+        </button>
+
+    </div>
+
+    
+    <script src="main.js"></script>
+    
+
+</body>
+
+</html>
